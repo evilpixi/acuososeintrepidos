@@ -13,34 +13,41 @@ dbg = {
     velocityColor: 0x00aeef
 }
 if (APP.debugMode) debugMode = dbg
-window.onload = function () {
-    try {
+window.onload = function ()
+{
+    try
+    {
         //CNData.test = true;
         //CNData.test = false
         // CNTrack.setup("promo:aei_2020")
-    } catch (err) {
+    } catch (err)
+    {
         console.log(err);
     }
     validatePortrait();
 }
-window.onresize = function () {
+window.onresize = function ()
+{
     validatePortrait();
 }
-function validatePortrait () {
+function validatePortrait ()
+{
     /*console.log("=============== VER AQUI ================")
     console.log(navigator.userAgent)
     console.log("=============== VER AQUI ================")*/
     if (window.innerWidth > window.innerHeight && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent))  // if landscape
     {
         divgirar.style.display = 'inline-block';
-        if (document.getElementsByTagName("canvas")[0] && document.getElementsByTagName("canvas")[0].classList) {
+        if (document.getElementsByTagName("canvas")[0] && document.getElementsByTagName("canvas")[0].classList)
+        {
             document.getElementsByTagName("canvas")[0].classList.add('canvashide'); // hide canvas
         }
     }
     else // if portrait
     {
         divgirar.style.display = 'none';
-        if (document.getElementsByTagName("canvas")[0] && document.getElementsByTagName("canvas")[0].classList) {
+        if (document.getElementsByTagName("canvas")[0] && document.getElementsByTagName("canvas")[0].classList)
+        {
             document.getElementsByTagName("canvas")[0].classList.remove('canvashide'); // show canvas
         }
     }
@@ -110,11 +117,13 @@ else {
 }*/
 
 
-function trackEvent (type, parameter = '') {
+function trackEvent (type, parameter = '')
+{
     if (!APP.enable_tracking) return;
 
     console.log("tracking: " + type + " + " + parameter)
-    try {
+    try
+    {
         parameter ? CNTrack.milestone(type, parameter) : CNTrack.milestone(type)
         /*switch(type) {
             case 'view-help': CNTrack.milestone("view.help", "page"+n); break
@@ -132,7 +141,8 @@ function trackEvent (type, parameter = '') {
             case 'splash': CNTrack.milestone("pageview"); break
         }*/
     }
-    catch (err) {
+    catch (err)
+    {
         console.log(err, type);
     }
 }
