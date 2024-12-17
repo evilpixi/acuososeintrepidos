@@ -1,0 +1,39 @@
+{
+    "scorePerSecond": 0,
+    "scorePerLevelLength": 0,  
+    "scorePerBonus": 150,
+    "scorePerFruit": {
+        "cherry-banana": 100,
+        "red-apple": 100,
+        "green-apple": 100,
+        "grape": 100,
+        "guava": 100,
+        "orange": 100,
+        "mango": 100
+    },
+
+    "player": {
+        "lifes": 3,
+        "postInflateMinigameImmuneTime": 2.5
+    },
+
+    "inflateMinigame": {
+        "AirPerClick": 10,
+
+        "AirNeed": 100,
+        "AirLostPerTime": 7,
+        "AirLostInterval": 0.7,
+        "AvailableTime": 7,
+
+        "AirNeedIncrement": 20,
+        "AirLostPerTimeIncrement": 3,
+        "AirLostIntervalIncrement": -0.1,
+        "AvailableTimeIncrement": 2.5
+    },
+
+    "obstacles": {
+        "TimeSharkDown": 3,
+        "TimePlatformDown": 2,
+        "TimePlatformUp": 2
+    }
+}

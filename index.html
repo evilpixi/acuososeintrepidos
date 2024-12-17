@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+    <title>Acuosos e Intrépidos</title>
+
+    <script src="lib/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="./lib/cndata.js" type="text/javascript"></script>
+
+    <script src="lib/phaser.min.js"></script>    
+    <script src="lib/TweenMax.min.js"></script>
+    <script src="lib/sha256.js"></script>
+    <style>
+        canvas {
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+            background-position: top center;
+            background-repeat: no-repeat;
+            width: 100vw !important;
+        }
+        html {
+            width: 100vw;
+        }
+        body {
+            width: 100vw;
+            margin:0;
+            padding:0;
+            background-color: transparent;            
+            overflow:hidden;
+            overflow-y:hidden;
+        }
+        
+        /* Safari 10.1+ */
+        
+        @media not all and (min-resolution:.001dpcm) { 
+
+            .body { 
+                margin:0;
+                margin-top:-28px;
+                padding:0;
+                background-color: transparent;            
+                overflow:hidden;
+                overflow-y:hidden;
+            }
+        }
+        
+        .girar {
+            position: absolute;
+            z-index: 9;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: #0d4042;
+            background-image: url("assets/images/screens/landscape.png");
+            background-position: center center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: none;
+        }
+        .iOsFix {
+            margin-top: -30px;
+        }
+        .canvashide {
+            display: none;
+        }
+        .iphonest {
+            width: 90vw !important;
+        }
+    </style>
+    <script>
+        $( document ).ready(function() {
+          if($(window.parent).height() < 560) {
+            $('canvas').addClass('iphonest');
+          }
+        });
+        
+    </script>
+</head>
+<body>   
+    <div id="divgirar" class="girar"></div>
+    <script src="js/app-config.js"></script>
+    <script src="js/global-data.js"></script>
+    <script src="js/preload-scene.js"></script>
+    <script src="js/game-scene.js"></script>
+    <script src="js/level-end-scene.js"></script>
+    <script src="js/options-scene.js"></script>
+    <script src="js/help-scene.js"></script>
+    <script src="js/track-preview-scene.js"></script>
+    <script src="js/got-it-scene.js"></script>
+    <script src="js/character-selection-scene.js"></script>
+    <script src="js/level-selection-scene.js"></script>
+    <script src="js/game-end-scene.js"></script>
+    <script src="js/inflate-minigame-scene.js"></script>
+    <script src="js/splash-scene.js"></script>
+    <script src="js/archievements-scene.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
