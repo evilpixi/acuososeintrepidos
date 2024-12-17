@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Acuosos e Intrépidos</title>
 
     <script src="lib/jquery-latest.min.js" type="text/javascript"></script>
     <script src="./lib/cndata.js" type="text/javascript"></script>
 
-    <script src="lib/phaser.min.js"></script>    
+    <script src="lib/phaser.min.js"></script>
     <script src="lib/TweenMax.min.js"></script>
     <script src="lib/sha256.js"></script>
     <style>
-        canvas {
+        /*canvas {
             margin: 0;
             padding: 0;
             z-index: 1;
             background-position: top center;
             background-repeat: no-repeat;
             width: 100vw !important;
-        }
+        }*/
         html {
             width: 100vw;
         }
+
         body {
             width: 100vw;
-            margin:0;
-            padding:0;
-            background-color: transparent;            
-            overflow:hidden;
-            overflow-y:hidden;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            overflow: hidden;
+            overflow-y: hidden;
         }
-        
-        /* Safari 10.1+ */
-        
-        @media not all and (min-resolution:.001dpcm) { 
 
-            .body { 
-                margin:0;
-                margin-top:-28px;
-                padding:0;
-                background-color: transparent;            
-                overflow:hidden;
-                overflow-y:hidden;
+        /* Safari 10.1+ */
+
+        @media not all and (min-resolution:.001dpcm) {
+
+            .body {
+                margin: 0;
+                margin-top: -28px;
+                padding: 0;
+                background-color: transparent;
+                overflow: hidden;
+                overflow-y: hidden;
             }
         }
-        
+
         .girar {
             position: absolute;
             z-index: 9;
@@ -60,26 +62,32 @@
             background-repeat: no-repeat;
             display: none;
         }
+
         .iOsFix {
             margin-top: -30px;
         }
+
         .canvashide {
             display: none;
         }
+
         .iphonest {
             width: 90vw !important;
         }
     </style>
     <script>
-        $( document ).ready(function() {
-          if($(window.parent).height() < 560) {
-            $('canvas').addClass('iphonest');
-          }
+        $(document).ready(function ()
+        {
+            if ($(window.parent).height() < 560)
+            {
+                $('canvas').addClass('iphonest');
+            }
         });
-        
+
     </script>
 </head>
-<body>   
+
+<body>
     <div id="divgirar" class="girar"></div>
     <script src="js/app-config.js"></script>
     <script src="js/global-data.js"></script>
@@ -98,4 +106,5 @@
     <script src="js/archievements-scene.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
